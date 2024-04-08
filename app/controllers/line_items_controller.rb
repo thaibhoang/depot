@@ -29,7 +29,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.save
         reset_visit_count
-        format.html { redirect_to cart_url(@line_item.cart)}
+        format.html { redirect_to store_index_url }
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -56,7 +56,7 @@ class LineItemsController < ApplicationController
     @line_item.destroy!
 
     respond_to do |format|
-      format.html { redirect_to cart_url(id: session[:cart_id]), notice: "Line item was successfully destroyed." }
+      format.html { redirect_to store_index_url, notice: "Line item was successfully destroyed." }
       format.json { head :no_content }
     end
   end
