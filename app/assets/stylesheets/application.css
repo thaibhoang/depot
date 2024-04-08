@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+ .img-container {
+  margin-right: 1.5rem;
+ }
+
+ .img-container a {
+  display: block;
+  width: 10rem;
+  height: 12rem;
+ }
+
+ .store-img {
+
+  object-fit: contain;
+ }
+
+@keyframes change-highlight {
+  0% {
+    background: #8f8;
+  } 
+  100% {
+    background: none;
+  }
+}
+
+.line-item-highlight {
+  animation: change-highlight 1s;
+}
+
+.change-highlight {
+  animation: change-highlight 1s;
+}
