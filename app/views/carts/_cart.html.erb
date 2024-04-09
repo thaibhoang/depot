@@ -18,6 +18,10 @@
     <%= button_to "Empty Cart", cart, method: :delete,
       class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' %>
     <%= button_to 'Checkout', new_order_path, method: :get,
-      class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600' %>
+      class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600',
+      "data-disable-checkout-target" => "checkout" %>
   </div>
 </div>
+<script>
+  window.dispatchEvent(new CustomEvent("cartLoaded"));
+</script>
