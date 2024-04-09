@@ -56,3 +56,7 @@ Product.create!(title: 'Modern CSS with Tailwind',
       </p>},
   image_url: 'tailwind.jpg',
   price: 18.95)
+
+["Check", "Credit card", "Perchase order"].each do |payment_method|
+  PaymentMethod.create!(name: payment_method)
+end
