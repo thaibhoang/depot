@@ -4,4 +4,13 @@ one:
   name: MyString
 
 two:
-  name: MyString
+  name: MyString2
+
+check_payment_method:
+  name: "Check"
+
+credit_card_payment_method:
+  name: "Credit card"
+
+purchase_order_payment_method:
+  name: "Purchase order"
