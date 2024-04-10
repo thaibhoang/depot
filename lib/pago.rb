@@ -21,6 +21,7 @@ class Pago
     end
     sleep 3 unless Rails.env.test?
     Rails.logger.info "Done Processing Payment"
-    OpenStruct.new(succeeded?: true)
+    success_probability = (rand(5) % 5 != 0)
+    OpenStruct.new(succeeded?: success_probability)
   end
 end

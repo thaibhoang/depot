@@ -20,4 +20,9 @@ class OrderMailer < ApplicationMailer
     @order = order
     mail to: order.email, subject: 'Pragmatic Store Order Shipped'
   end
+
+  def unsuccessed_charge(order)
+    @order = order
+    mail to: order.email, subject: 'Pragmatic Store Order Payment Failed'
+  end
 end
