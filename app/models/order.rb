@@ -3,7 +3,12 @@ require 'pago'
 class Order < ApplicationRecord
   has_many :line_items, dependent: :destroy
 
-  enum pay_type: PaymentMethod.pluck(:name, :id).to_h.transform_values(&:to_i)
+  # enum pay_type: PaymentMethod.pluck(:name, :id).to_h.transform_values(&:to_i)
+  enum pay_type: {
+    "Check" => 1,
+    "Credit card" => 2,
+    "Purchase order" => 3
+  }
 
   validates :name, :email, :address, presence: true
   validates :pay_type, inclusion: pay_types.keys
@@ -46,5 +51,9 @@ class Order < ApplicationRecord
     else
       raise payment_result.error
     end
+  end
+
+  def send_shipment_email
+    OrderMailer.shipped(self).deliver_later
   end
 end
