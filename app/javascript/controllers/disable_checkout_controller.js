@@ -17,7 +17,6 @@ export default class extends Controller {
       const cartDiv = document.getElementById('cart');
       if (cartDiv) {        
         window.addEventListener('cartLoaded', () => {
-          console.log(this.checkoutTarget) 
           // disable everytime cart is reloaded
           this.disableCheckout();
         });
