@@ -14,7 +14,7 @@ module ActiveSupport
   end
 end
 
-class ActionDispatch::IntegrationTest
+module AuthenticationHelpers  
   def login_as(user)
     if respond_to? :visit
       visit login_url
@@ -31,4 +31,12 @@ class ActionDispatch::IntegrationTest
   def setup
     login_as users(:one)
   end
+end
+
+class ActionDispatch::IntegrationTest
+  include AuthenticationHelpers
+end
+
+class ActionDispatch::SystemTestCase
+  include AuthenticationHelpers
 end
