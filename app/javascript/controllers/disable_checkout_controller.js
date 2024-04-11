@@ -30,6 +30,8 @@ export default class extends Controller {
   }
 
   disableCheckout() {
-    this.checkoutTarget.disable = this.checkoutTarget.hidden = this.inOrderPage()
+    if (this.inOrderPage()) {
+      this.checkoutTarget.disable = this.checkoutTarget.hidden = this.inOrderPage()
+    }
   }
 }
