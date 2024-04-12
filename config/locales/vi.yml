@@ -6,6 +6,7 @@ vi:
       questions: "Câu Hỏi"
       news: "Thông Tin"
       contact: "Liên Hệ"
+      login: "Đăng Nhập"
   store:
     index:
       title_html: "Danh mục sản phẩm của Pragmatic"

@@ -6,6 +6,7 @@ es:
       questions: "Preguntas"
       news: "Noticias"
       contact: "Contacto"
+      login: "Acceso"
   store:
     index:
       title_html: "Su Cat&aacute;logo de Pragmatic"
