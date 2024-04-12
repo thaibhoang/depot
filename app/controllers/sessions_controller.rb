@@ -4,6 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # If there are no user, what ever get type into the login gonna turn into a new user
+    if User.count == 0 
+      User.create_starter_user_with(params[:name], params[:password])
+    end
+    
     user = User.find_by(name: params[:name])
     if user&.authenticate(params[:password])
       session[:user_id] = user.id

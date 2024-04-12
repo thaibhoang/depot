@@ -5,6 +5,10 @@ class User < ApplicationRecord
   class Error < StandardError
   end
 
+  def self.create_starter_user_with(name, password)
+    User.create!(name: name, password: password, password_confirmation: password)
+  end
+
   private
 
   def ensure_an_admin_remains
