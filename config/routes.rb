@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   end
   
   resources :users
+  resources :products do
+    get :who_bought, on: :member
+  end
 
   scope '(:locale)' do
     resources :orders
@@ -15,9 +18,6 @@ Rails.application.routes.draw do
     root "store#index", as: 'store_index'
   end
 
-  resources :products do
-    get :who_bought, on: :member
-  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
