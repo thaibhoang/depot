@@ -47,7 +47,7 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       if @line_item.update(line_item_params)
         format.turbo_stream { @current_item = @line_item }
-        format.html { redirect_to store_index_url }
+        format.html { redirect_to store_index_url(locale: I18n.locale) }
         format.json { render :show, status: :ok, location: @line_item }
       else
         format.html { render :edit, status: :unprocessable_entity }

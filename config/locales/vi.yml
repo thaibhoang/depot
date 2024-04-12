@@ -1,0 +1,76 @@
+vi:
+  layouts:
+    application:
+      title: "Sach Pragma"
+      home: "Trang Chủ"
+      questions: "Câu Hỏi"
+      news: "Thông Tin"
+      contact: "Liên Hệ"
+  store:
+    index:
+      title_html: "Danh mục sản phẩm của Pragmatic"
+    product:
+      add_html: "Thêm Vào Giỏ Hàng"
+
+  carts:
+    cart:
+      title: "Giỏ Hàng Của Bạn"
+      empty: "Xóa Giỏ Hàng"
+      checkout: "Thanh Toán"
+      total: "Tổng"
+
+
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format: "%n&nbsp;%u"
+
+  orders:
+    new:
+      legend: "Vui lòng nhập thông tin chi tiết của bạn"
+    form:
+      name: "Tên"
+      address_html: "Địa chỉ"
+      email: "E-mail"
+      pay_type: "Thanh toán bằng"
+      pay_prompt_html: "Chọn phương thức thanh toán"
+      submit: "Đặt hàng"
+      pay_types:
+        "Check": "Séc"
+        "Credit card": "Thẻ tín dụng"
+        "Purchase order": "Đơn đặt hàng"
+    check:
+      routing_number: "Số định tuyến #"
+      account_number: "Tài khoản #"
+    cc:
+      cc_number: "Số Thẻ #"
+      expiration_date: "Hết hạn"
+    po:
+      po_number: "PO #"
+
+  activerecord:
+    models:
+      order: "đặt hàng"
+    attributes:
+      order:
+        address: "Địa chỉ"
+        name: "Tên"
+        email: "E-mail"
+        pay_type: "Phương thức thanh toán"
+
+    errors:
+      messages:
+        inclusion: "không có trong danh sách"
+        blank: "không thể để trống"
+  errors:
+    template:
+      body: "Có vấn đề với các trường sau:"
+      header:
+        one: "1 lỗi đã khiến %{model} này không thể lưu được"
+        other: "%{count} Lỗi đã khiến %{model} này không thể lưu được"
+
+  thanks: "Cảm ơn bạn đã đặt hàng"

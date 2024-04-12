@@ -44,3 +44,12 @@
 .change-highlight {
   animation: change-highlight 1s;
 }
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  margin: auto;
+}
