@@ -43,4 +43,16 @@ class UsersTest < ApplicationSystemTestCase
 
     assert_text "User was successfully destroyed"
   end
+
+  test "not login people can't access users" do 
+    click_button 'Logout'
+    assert_text "Home"
+    assert_no_text "Orders"
+    assert_no_text "Products"
+    assert_no_text "Users"
+    assert_no_text "Logout"
+    visit users_url
+    assert_no_selector "h1", text: "Users"
+    assert_text "Please Log In"
+  end
 end
