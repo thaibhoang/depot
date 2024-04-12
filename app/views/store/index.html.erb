@@ -3,7 +3,7 @@
 
 <% if @visit_count > 5 %>
   <div class="text-l mb-6 pb-2 border-b-2">
-    You visited this page <%= pluralize(@visit_count, 'time') %>
+     <%= t('.visit_notice')%>  <%= @visit_count %> <%= t('.times')%>
   </div>
 <% end %>
 

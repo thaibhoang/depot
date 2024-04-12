@@ -9,6 +9,8 @@ es:
   store:
     index:
       title_html: "Su Cat&aacute;logo de Pragmatic"
+      visit_notice: "Has visitado esta página"
+      times: "tiempos"  
     product:
       add_html: "A&ntilde;adir al Carrito"
 

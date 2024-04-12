@@ -38,8 +38,11 @@ en:
   store:
     index:
       title_html: "Your Pragmatic Catalog"
+      visit_notice: "You have visited this page"
+      times: "times"   
     product:
       add_html: "Add to Cart"
+      
 
   carts:
     cart:

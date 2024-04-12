@@ -19,5 +19,5 @@ protected
         logger.error flash.now[:notice]
       end
     end
-  end
+  end  
 end

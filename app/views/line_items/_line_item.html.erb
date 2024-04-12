@@ -9,7 +9,7 @@
     <%= line_item.product.title %>
   </td>
   <td class="text-right font-bold">
-    <%= number_to_currency(line_item.total_price) %>
+    <%= format_currency(line_item.total_price) %>
   </td>
   <td>
     <%= button_to "+", line_items_url(product_id: line_item.product.id, locale: I18n.locale), 

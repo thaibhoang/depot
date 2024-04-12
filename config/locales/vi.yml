@@ -9,8 +9,11 @@ vi:
   store:
     index:
       title_html: "Danh mục sản phẩm của Pragmatic"
+      visit_notice: "Bạn đã truy cập trang này"
+      times: "lần"
     product:
       add_html: "Thêm Vào Giỏ Hàng"
+    
 
   carts:
     cart:
@@ -23,11 +26,11 @@ vi:
   number:
     currency:
       format:
-        unit: "$US"
-        precision: 2
-        separator: ","
-        delimiter: "."
-        format: "%n&nbsp;%u"
+        unit: "₫"  # Vietnamese dong symbol
+        precision: 0  # No decimal places for dong
+        separator: ","  # Thousands separator
+        delimiter: "."  # Decimal delimiter
+        format: "%n%u"  # Format for displaying currency
 
   orders:
     new:
@@ -69,8 +72,6 @@ vi:
   errors:
     template:
       body: "Có vấn đề với các trường sau:"
-      header:
-        one: "1 lỗi đã khiến %{model} này không thể lưu được"
-        other: "%{count} Lỗi đã khiến %{model} này không thể lưu được"
+      header: "%{count} Lỗi đã khiến %{model} này không thể lưu được"
 
   thanks: "Cảm ơn bạn đã đặt hàng"
