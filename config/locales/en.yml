@@ -47,7 +47,7 @@ en:
   carts:
     cart:
       title: "Your Cart"
-      empty: "Empty cart"
+      empty: "Empty Cart"
       checkout: "Checkout"
       total: "Total"
 
@@ -68,8 +68,8 @@ en:
     form:
       name: "Name"
       address_html: "Address"
-      email: "E-mail"
-      pay_type: "Pay with"
+      email: "Email"
+      pay_type: "Pay type"
       pay_prompt_html: "Select a payment method"
       submit: "Place Order"
       pay_types:
@@ -77,12 +77,12 @@ en:
         "Credit card": "Credit Card"
         "Purchase order": "Purchase Order"
     check:
-      routing_number: "Routing #"
-      account_number: "Account #"
+      routing_number: "Routing number"
+      account_number: "Account number"
     cc:
-      cc_number: "CC #"
-      expiration_date: "Expiry"
+      cc_number: "Credit card number"
+      expiration_date: "Expiration date"
     po:
-      po_number: "PO #"
+      po_number: "Po number"
 
   thanks: "Thank you for your order"
