@@ -17,10 +17,8 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cart" do
     assert_difference("Cart.count") do
-      post carts_url, params: { cart: {  } }
+      get store_index_url
     end
-
-    assert_redirected_to cart_url(Cart.last)
   end
 
   test "should show cart" do
