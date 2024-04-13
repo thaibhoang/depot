@@ -58,6 +58,33 @@ dd {
   padding-left: 2rem;
 }
 
-li {
-  list-style: circle;
+.field {
+  margin: 1rem 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #8f8;
+  border-radius: 1rem;
+  margin: 1rem 0;
+  border: solid grey 2px ;
+  font-weight: bold;
+}
+
+.notice {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgb(222, 241, 112);
+  border-radius: 1rem;
+  margin: 1rem 0;
+  border: solid grey 2px;
+  font-weight: bold;
+}
+
+h4 {
+  font-weight: bold;
+  margin-top: 1rem;
 }
