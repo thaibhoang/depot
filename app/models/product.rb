@@ -3,7 +3,7 @@ class Product < ApplicationRecord
   has_rich_text :rich_content
   before_destroy :ensure_not_referenced_by_any_line_item
 
-  validates :title, :description, :price, presence: true
+  validates :title, :description, :price, :image_url, presence: true
   validates :title, uniqueness: true
   validates :image_url, allow_blank: true, format: {
   with: %r{\.(gif|jpg|png)\z}i,
