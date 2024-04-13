@@ -9,6 +9,13 @@
     <%= product.description %>
   </p>
 
+  <% if product.rich_content.present? %>
+    <p class="my-5">
+      <strong class="block font-medium mb-1">Rich Content:</strong>
+      <%= product.rich_content %>
+    </p>
+  <% end %>
+
   <p class="my-5">
     <strong class="block font-medium mb-1">Image url:</strong>
     <%= product.image_url %>
