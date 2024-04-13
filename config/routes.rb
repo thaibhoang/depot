@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'support_requests/index'
+  get 'support_requests/update'
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
@@ -6,6 +8,8 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
   
+  resources :support_requests, only: %i[ index update ]
+
   resources :users
   resources :products do
     get :who_bought, on: :member

@@ -15,7 +15,7 @@
     <header class="bg-green-700">
       
       <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
-      <h1><%= @page_title %></h1>
+      <h1 class="title"><%= @page_title %></h1>
       <aside data-controller="locale">
         <%= form_tag store_index_path, method: :get, class: 'locale ml-4 py-1 px-2' do %>
           <%= select_tag 'set_locale',

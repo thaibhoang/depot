@@ -50,6 +50,14 @@ header {
   align-items: center;
 }
 
-header h1 {
+.title {
   margin: auto;
+}
+
+dd {
+  padding-left: 2rem;
+}
+
+li {
+  list-style: circle;
 }
