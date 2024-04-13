@@ -60,3 +60,5 @@ Product.create!(title: 'Modern CSS with Tailwind',
 ["Check", "Credit card", "Perchase order"].each do |payment_method|
   PaymentMethod.create!(name: payment_method)
 end
+
+User.create!(name: "demo", password: "demo", password_confirmation: "demo")

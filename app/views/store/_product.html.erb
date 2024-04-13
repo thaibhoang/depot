@@ -2,7 +2,7 @@
   <li class='flex mb-6'>
 
     <div>
-      <%= link_to line_items_path(product_id: product, locale: I18n.locale), data: {turbo_method: :post} , class: "block w-40 h-48 mr-6" do %>
+      <%= link_to line_items_url(product_id: product, locale: I18n.locale), data: {turbo_method: :post} , class: "block w-40 h-48 mr-6" do %>
         <%= image_tag(product.image_url, class: "contain shadow") %>
       <% end %>
     </div>
@@ -21,7 +21,7 @@
         <%= format_currency(product.price) %>
         
         <%= button_to t('.add_html'), 
-            line_items_path(product_id: product, locale: I18n.locale),
+            line_items_url(product_id: product, locale: I18n.locale),
             form_class: 'inline', 
             class: 'ml-4 rounded-lg py-1 px-2
                   text-white bg-green-600' %>

@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.1].define(version: 2024_04_13_045502) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "action_mailbox_inbound_emails", force: :cascade do |t|
     t.integer "status", default: 0, null: false
     t.string "message_id", null: false
@@ -64,13 +67,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_13_045502) do
   end
 
   create_table "line_items", force: :cascade do |t|
-    t.integer "product_id", null: false
+    t.bigint "product_id", null: false
     t.integer "cart_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 1
     t.decimal "price"
-    t.integer "order_id"
+    t.bigint "order_id"
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
     t.index ["order_id"], name: "index_line_items_on_order_id"
     t.index ["product_id"], name: "index_line_items_on_product_id"
@@ -80,9 +83,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_13_045502) do
     t.string "name"
     t.text "address"
     t.string "email"
+    t.integer "pay_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "pay_type"
     t.string "routing_number"
     t.string "account_number"
     t.string "credit_card_number"
@@ -107,10 +110,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_13_045502) do
   end
 
   create_table "support_requests", force: :cascade do |t|
-    t.string "email"
-    t.string "subject"
-    t.text "body"
-    t.integer "order_id"
+    t.string "email", comment: "Email of the submitter"
+    t.string "subject", comment: "Subject of their support email"
+    t.text "body", comment: "Body of their support email"
+    t.bigint "order_id", comment: "their most recent order, if applicable"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_support_requests_on_order_id"
